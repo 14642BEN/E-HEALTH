@@ -16,6 +16,16 @@ def get_db():
     conn.row_factory = sqlite3.Row
     return conn
 
+import mysql.connector
+
+def get_db():
+    return mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='Mutheke1992,',
+        database='e_healthcare'
+    )
+
 @app.route('/')
 def index():
     return render_template('index.html')

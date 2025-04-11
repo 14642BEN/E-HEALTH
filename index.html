@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to the E-Healthcare System</h2>
+<p>Please <a href="{{ url_for('login', user_type='patient') }}">Login as Patient</a> or 
+<a href="{{ url_for('login', user_type='doctor') }}">Login as Doctor</a>.</p>
+{% endblock %}
