@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Your Uploaded Files</h2>
+<ul class="list-group">
+    {% for f in files %}
+    <li class="list-group-item">
+        <a href="{{ url_for('uploaded_file', filename=f['filepath']) }}" target="_blank">{{ f['filepath'] }}</a>
+    </li>
+    {% else %}
+    <li class="list-group-item">No files uploaded yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

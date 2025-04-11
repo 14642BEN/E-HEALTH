@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome, Dr. {{ session.username }}</h2>
+
+<h4 class="mt-4">Your Appointments</h4>
+<ul class="list-group">
+    {% for appt in appointments %}
+    <li class="list-group-item">
+        Appointment with {{ appt['patient'] }} on {{ appt['date'] }}
+    </li>
+    {% else %}
+    <li class="list-group-item">No appointments yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
