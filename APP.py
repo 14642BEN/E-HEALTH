@@ -12,7 +12,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 def get_db():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('e_health.db')
     conn.row_factory = sqlite3.Row
     return conn
 
