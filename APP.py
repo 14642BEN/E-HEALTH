@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = '103-531-765'
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -15,16 +15,6 @@ def get_db():
     conn = sqlite3.connect('e_health.db')
     conn.row_factory = sqlite3.Row
     return conn
-
-import mysql.connector
-
-def get_db():
-    return mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='Mutheke1992,',
-        database='e_healthcare'
-    )
 
 @app.route('/')
 def index():
